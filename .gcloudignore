@@ -1,0 +1,9 @@
+.gcloudignore
+.git
+.next
+.data
+node_modules
+test-results
+AGENTS.md
+sources
+.env*

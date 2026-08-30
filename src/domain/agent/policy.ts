@@ -1,0 +1,28 @@
+import type {
+  ActionType,
+  ApprovalLevel,
+} from "@/src/domain/agent/model";
+
+export const RESOLUTION_ACTION_CODES = [
+  "REVIEW_EXISTING_EVIDENCE",
+  "WAIT_FOR_NEW_EVIDENCE",
+  "REQUEST_USER_EVIDENCE",
+  "PREPARE_EXTERNAL_FOLLOW_UP",
+  "REFER_TO_HUMAN_REVIEW",
+  "NO_PERMITTED_ACTION",
+] as const satisfies readonly ActionType[];
+
+export const REQUIRED_APPROVAL_BY_ACTION = {
+  REVIEW_EXISTING_EVIDENCE: "SAFE_INTERNAL",
+  WAIT_FOR_NEW_EVIDENCE: "SAFE_INTERNAL",
+  REQUEST_USER_EVIDENCE: "USER_APPROVAL_REQUIRED",
+  PREPARE_EXTERNAL_FOLLOW_UP: "USER_APPROVAL_REQUIRED",
+  REFER_TO_HUMAN_REVIEW: "USER_APPROVAL_REQUIRED",
+  NO_PERMITTED_ACTION: "OUT_OF_SCOPE_HIGH_RISK",
+} as const satisfies Record<ActionType, ApprovalLevel>;
+
+export const actionRequiresTarget = (
+  action: ActionType,
+): action is "REQUEST_USER_EVIDENCE" | "PREPARE_EXTERNAL_FOLLOW_UP" =>
+  action === "REQUEST_USER_EVIDENCE" ||
+  action === "PREPARE_EXTERNAL_FOLLOW_UP";

@@ -1,0 +1,58 @@
+{
+  "name": "resolvia",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:firestore": "vitest run tests/integration/firestore-resolution-store.test.ts tests/integration/firestore-resolution-store-integrity.test.ts tests/integration/firestore-rate-limiter.test.ts tests/integration/firestore-case-bundle-bounds.test.ts tests/integration/firestore-ingress-replay-guard.test.ts",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:security": "vitest run tests/security",
+    "test:e2e": "playwright test",
+    "test:gemini:smoke": "vitest run tests/live/gemini-smoke.test.ts",
+    "test:stripe:smoke": "vitest run tests/live/stripe-test-mode.test.ts",
+    "test:phase6:connected": "vitest run tests/live/phase6-connected.test.ts",
+    "test:release:connected": "vitest run tests/live/release-connected.test.ts"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "9.0.0",
+    "@google-cloud/pubsub": "6.0.0",
+    "@google-cloud/secret-manager": "7.0.0",
+    "@google/adk": "1.6.0",
+    "firebase": "12.17.1",
+    "firebase-admin": "14.2.0",
+    "google-auth-library": "10.9.1",
+    "lucide-react": "^1.30.0",
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "stripe": "22.5.0",
+    "zod": "^4.4.3"
+  },
+  "overrides": {
+    "adm-zip": "0.6.0",
+    "tar": "7.5.22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.0",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  }
+}

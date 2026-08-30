@@ -1,0 +1,13 @@
+﻿docs\superpowers (7 files)
+docs\release (8 files)
+docs\submission (5 files)
+sanitized email in infra\google\deploy.ps1
+sanitized email in infra\google\bootstrap-phase6.ps1
+sanitized email in infra\google\effective-iam.ps1
+sanitized email in infra\google\provision-build-identity.ps1
+sanitized fixture paths in unit redaction tests
+placeholder ProjectId default in infra\google\deploy.ps1
+placeholder ProjectId default in infra\google\bootstrap-phase6.ps1
+placeholder ProjectId default in infra\google\provision-build-identity.ps1
+placeholder ProjectId default in infra\google\preflight.ps1
+placeholder ProjectId default in infra\google\rollback.ps1
