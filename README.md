@@ -1,4 +1,4 @@
-# Resolvia
+﻿# Resolvia
 
 **AI investigates. Evidence decides.**
 
@@ -8,9 +8,9 @@ Resolvia is an evidence-driven dispute resolution workspace. It keeps claims, ev
 
 ## 2. Why WebMCP matters
 
-WebMCP lets an external agent inspect the **same authoritative case state** the human sees through structured tools—not by scraping the UI.
+WebMCP lets an external agent inspect the **same authoritative case state** the human sees through structured toolsâ€”not by scraping the UI.
 
-## 3. The demo scenario — RV-1028
+## 3. The demo scenario â€” RV-1028
 
 Open `/cases/RV-1028`. The seeded synthetic case is deliberately incomplete: provider confirmation and customer receipt evidence are still missing, so deterministic readiness is **NOT READY**.
 
@@ -44,13 +44,13 @@ Open `/cases/RV-1028`. The seeded synthetic case is deliberately incomplete: pro
 
 ```text
 Browser (WebMCP tools)
-  → same-origin POST /api/webmcp/invoke
-  → session identity + authorizeCaseAccess
-  → read-only case / Truth Graph / readiness projections
-  → draft-only evidence request (requiresHumanApproval=true)
+  â†’ same-origin POST /api/webmcp/invoke
+  â†’ session identity + authorizeCaseAccess
+  â†’ read-only case / Truth Graph / readiness projections
+  â†’ draft-only evidence request (requiresHumanApproval=true)
 
 Authoritative writes stay outside WebMCP:
-evidence ingestion · deterministic policy · human approval
+evidence ingestion Â· deterministic policy Â· human approval
 ```
 
 Gemini (when configured) may propose analysis as an append-only AgentRun. It cannot assign provenance, transition the case, or execute external actions.
@@ -66,17 +66,17 @@ npm.cmd run dev
 
 Open [http://localhost:3000/cases/RV-1028](http://localhost:3000/cases/RV-1028). Prefer `localhost` over `127.0.0.1` under Next.js 16.
 
-Optional: copy `.env.example` → `.env.local` and set placeholders only. No credentials are required for the deterministic demo.
+Optional: copy `.env.example` â†’ `.env.local` and set placeholders only. No credentials are required for the deterministic demo.
 
 ## 9. WebMCP testing
 
 1. Use supported Chrome / ChatGPT in-app browser with WebMCP enabled.
 2. Open RV-1028 and confirm the five tools are discovered.
 3. Replay:
-   - “Can RV-1028 be resolved yet?” → readiness **NOT READY**
-   - “What is missing?” → gaps
-   - “Show me why.” → Truth Graph
-   - “Prepare the request.” → draft; **human approval required**
+   - â€œCan RV-1028 be resolved yet?â€ â†’ readiness **NOT READY**
+   - â€œWhat is missing?â€ â†’ gaps
+   - â€œShow me why.â€ â†’ Truth Graph
+   - â€œPrepare the request.â€ â†’ draft; **human approval required**
 
 Local Chrome example flags: `--enable-features=WebMCPTesting` / `--enable-blink-features=WebMCP`.
 
@@ -105,4 +105,7 @@ This public repository is a **sanitized competition snapshot** derived from a pr
 
 ## License
 
-No project LICENSE file is included yet. `LICENSE_APPROVAL_REQUIRED = YES`. Do not assume MIT/Apache/GPL until the owner adds an explicit license.
+MIT License — see [LICENSE](LICENSE).
+
+Copyright (c) 2026 Resolvia contributors.
+
