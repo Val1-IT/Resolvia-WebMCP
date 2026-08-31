@@ -1,13 +1,15 @@
-# Competition deploy packaging — excludes local artifacts only
-.node_modules
+﻿# Competition deploy packaging — excludes local artifacts only
+node_modules
 .next
 .git
 .data
 test-results
 playwright-report
 coverage
+*.tsbuildinfo
 firebase-debug.log
 firestore-debug.log
 .env
 .env.*
 !.env.example
+PUBLICATION_STATUS.md
