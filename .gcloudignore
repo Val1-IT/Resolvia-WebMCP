@@ -1,9 +1,13 @@
-.gcloudignore
-.git
+# Competition deploy packaging — excludes local artifacts only
+.node_modules
 .next
+.git
 .data
-node_modules
 test-results
-AGENTS.md
-sources
-.env*
+playwright-report
+coverage
+firebase-debug.log
+firestore-debug.log
+.env
+.env.*
+!.env.example
