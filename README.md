@@ -101,7 +101,9 @@ This public repository is a **sanitized competition snapshot** derived from a pr
 
 ## 12. Demo URL
 
-`LIVE_URL = PENDING_COMPETITION_DEPLOY_APPROVAL`
+[https://resolvia-webmcp-competition-3pzbr52hla-et.a.run.app](https://resolvia-webmcp-competition-3pzbr52hla-et.a.run.app/cases/RV-1028)
+
+`LIVE_URL = https://resolvia-webmcp-competition-3pzbr52hla-et.a.run.app`
 
 ## License
 
